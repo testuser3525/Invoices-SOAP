@@ -1,0 +1,300 @@
+{
+  "info": {
+    "_postman_id": "7c96084d-2582-4b9c-8b50-6a1a60f40cb0",
+    "name": "SOAP",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54599008",
+    "_collection_link": "https://go.postman.co/collection/54599008-7c96084d-2582-4b9c-8b50-6a1a60f40cb0?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Create Invoice",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "text/xml",
+            "type": "text"
+          },
+          {
+            "key": "SOAPAction",
+            "value": "http://tempuri.org/IInvoiceWebService/CreateInvoice",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\r\n                  xmlns:tem=\"http://tempuri.org/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <tem:CreateInvoice>\r\n         <tem:customerName>Alice Johnson</tem:customerName>\r\n         <tem:amount>1500.00</tem:amount>\r\n      </tem:CreateInvoice>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{API_URL}}/InvoiceWebService.svc",
+          "host": [
+            "{{API_URL}}"
+          ],
+          "path": [
+            "InvoiceWebService.svc"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Invoices",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "text/xml",
+            "type": "text"
+          },
+          {
+            "key": "SOAPAction",
+            "value": "http://tempuri.org/IInvoiceWebService/GetAllInvoices",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\r\n                  xmlns:tem=\"http://tempuri.org/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <tem:GetAllInvoices/>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{API_URL}}/InvoiceWebService.svc",
+          "host": [
+            "{{API_URL}}"
+          ],
+          "path": [
+            "InvoiceWebService.svc"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Invoice By Id",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "text/xml",
+            "type": "text"
+          },
+          {
+            "key": "SOAPAction",
+            "value": "http://tempuri.org/IInvoiceWebService/GetInvoiceById",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\r\n                  xmlns:tem=\"http://tempuri.org/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <tem:GetInvoiceById>\r\n         <tem:id>8</tem:id>\r\n      </tem:GetInvoiceById>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{API_URL}}/InvoiceWebService.svc",
+          "host": [
+            "{{API_URL}}"
+          ],
+          "path": [
+            "InvoiceWebService.svc"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Invoice",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "text/xml",
+            "type": "text"
+          },
+          {
+            "key": "SOAPAction",
+            "value": "http://tempuri.org/IInvoiceWebService/UpdateInvoice",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\r\n                  xmlns:tem=\"http://tempuri.org/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <tem:UpdateInvoice>\r\n         <tem:id>1</tem:id>\r\n         <tem:customerName>Alice Johnson Updated</tem:customerName>\r\n         <tem:amount>2000.00</tem:amount>\r\n      </tem:UpdateInvoice>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{API_URL}}/InvoiceWebService.svc",
+          "host": [
+            "{{API_URL}}"
+          ],
+          "path": [
+            "InvoiceWebService.svc"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Change Invoice Status",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "text/xml",
+            "type": "text"
+          },
+          {
+            "key": "SOAPAction",
+            "value": "http://tempuri.org/IInvoiceWebService/ChangeInvoiceStatus",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\r\n                  xmlns:tem=\"http://tempuri.org/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <tem:ChangeInvoiceStatus>\r\n         <tem:id>1</tem:id>\r\n         <tem:newStatus>Issued</tem:newStatus>\r\n      </tem:ChangeInvoiceStatus>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{API_URL}}/InvoiceWebService.svc",
+          "host": [
+            "{{API_URL}}"
+          ],
+          "path": [
+            "InvoiceWebService.svc"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Send Invoice",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "text/xml",
+            "type": "text"
+          },
+          {
+            "key": "SOAPAction",
+            "value": "http://tempuri.org/IInvoiceWebService/SendInvoice",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\r\n                  xmlns:tem=\"http://tempuri.org/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <tem:SendInvoice>\r\n         <tem:id>1</tem:id>\r\n      </tem:SendInvoice>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{API_URL}}/InvoiceWebService.svc",
+          "host": [
+            "{{API_URL}}"
+          ],
+          "path": [
+            "InvoiceWebService.svc"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Invoice",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "text/xml",
+            "type": "text"
+          },
+          {
+            "key": "SOAPAction",
+            "value": "http://tempuri.org/IInvoiceWebService/DeleteInvoice",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\r\n                  xmlns:tem=\"http://tempuri.org/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <tem:DeleteInvoice>\r\n         <tem:id>1</tem:id>\r\n      </tem:DeleteInvoice>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{API_URL}}/InvoiceWebService.svc",
+          "host": [
+            "{{API_URL}}"
+          ],
+          "path": [
+            "InvoiceWebService.svc"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "API_URL",
+      "value": "http://localhost:53960"
+    }
+  ]
+}
